@@ -3,7 +3,7 @@ class Solution(object):
         """
         Author: zhouyuqi
         use Dynamic programming
-        the state is the maxproduct substring with the element i
+        the dynamic state is the maxproduct(minpoint) substring which ends with the element i
         """
         if nums is None: return 0
 
@@ -18,3 +18,9 @@ class Solution(object):
             res = max(res, dp[x][0])
 
         return res
+    
+
+    '''
+    method 1: dynamic programming
+    method 2: write 2 for-loops. 1 for-loop iterate each i in the list, 2nd loop finds out the maxpoint substring that begins with element i. 
+    '''
